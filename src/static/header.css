@@ -1,0 +1,146 @@
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 2;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.navbar li a {
+  color: #9c9c9c !important;
+}
+
+.navbar .btn a {
+  color: #6EB6FF !important;
+}
+
+.dicon {
+  font-size: 1.28rem;
+}
+
+.logoheader {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.logoheader .logo {
+  font-family: Balgin;
+  color: #6EB6FF;
+}
+
+.logoheader .Logo {
+  margin-top: 0.3rem;
+  width: 3rem;
+  height: 3rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.nav-dash {
+  width: 18%;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #6EB6FF;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 840px) {
+  .nav-dash {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .dicon {
+    margin-left: auto;
+  }
+  .navbar {
+    position: fixed;
+    right: 0;
+    height: 94vh;
+    top: 7vh;
+    width: 62%;
+    background-color: white;
+    z-index: 50;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .navlist {
+    width: 62%;
+    margin-left: 20%;
+  }
+  .navlist p {
+    font-size: 1em;
+  }
+  .nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80%;
+  }
+  .nav li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    margin-top: 8px;
+    padding-left: 6%;
+    cursor: pointer;
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .nav-active li {
+    opacity: 1;
+  }
+  .toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+            transform: rotate(-45deg) translate(-4px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -6px);
+            transform: rotate(45deg) translate(-4px, -6px);
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .navlist p {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  .nav-dash ul {
+    height: 40%;
+  }
+  .headflex {
+    width: 95%;
+  }
+  .btn {
+    font-size: 0.68em;
+  }
+}
+/*# sourceMappingURL=header.css.map */
