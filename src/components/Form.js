@@ -164,7 +164,7 @@ const Form = ({ setEmail ,setid, editform=false, initialdata, setloggedin}) => {
 					<div className={`${window.location.pathname==="/application" || window.location.pathname==="/application/" || window.location.pathname==="/editprofile" || window.location.pathname==="/editprofile/"?"hide":""} ml5 mr5 mt3`}>
 						<div className='buttons flex mb5'>
 							{/* <NavLink  className={`pointer link mr2 dim ba br-100 pv2 ph3 bg-white`} style={{border:"1px solid #6EB6FF", color:"#6EB6FF"}} onClick={()=>history.push(`${path}`)} exact to={`${path}`} activeClassName="active-btn">1</NavLink> */}
-							<div exact to={path} activeClassName="hide">
+							<div exact="true" to={path} activeclassname="hide">
 								<NavLink  className={`pointer link mr2 dim ba br-100 ph3 pv2 bg-white`} style={{border:"1px solid #6EB6FF", color:"#6EB6FF"}} onClick={()=>history.push(`${path}/cv`)} exact to={`${path}/cv`} activeClassName="active-btn">1</NavLink>
 								<NavLink  className={`pointer link mr2 dim ba br-100 ph3 pv2 bg-white`} style={{border:"1px solid #6EB6FF", color:"#6EB6FF"}} onClick={()=>history.push(`${path}/information`)} exact to={`${path}/information`} activeClassName="active-btn">2</NavLink>
 								<NavLink  className={`pointer link mr2 dim ba br-100 ph3 pv2 bg-white`} style={{border:"1px solid #6EB6FF", color:"#6EB6FF"}} onClick={()=>history.push(`${path}/preferences`)} exact to={`${path}/preferences`} activeClassName="active-btn">3</NavLink>

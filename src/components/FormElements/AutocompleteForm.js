@@ -21,11 +21,6 @@ const FormikAutocomplete = ({ name, label, options, optionLabel, freeSolo = true
 							freeSolo={freeSolo}
 							onChange={(e,v)=>form.setFieldValue(name, v.name)}
 							inputValue={form.values[name]}
-							
-							// inputValue={form.values[name]}
-							// onInputChange={(event, newInputValue) => {
-							// 	form.setFieldValue(name, newInputValue);
-							// }}
 							renderInput={(params) => (
 								<TextField
 									placeholder={placeholder}

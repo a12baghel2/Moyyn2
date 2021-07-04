@@ -36,12 +36,12 @@ const moyynTheme = createMuiTheme({
 });
 
 ReactDOM.render(
-  /*<React.StrictMode>*/
+  <React.StrictMode>
   <StylesProvider injectFirst>
     <ThemeProvider theme={moyynTheme}>
       <App />
     </ThemeProvider>
-  </StylesProvider>,
-  /*	</React.StrictMode>*/
+  </StylesProvider>
+  </React.StrictMode>,
   document.getElementById("root")
 );

@@ -31,16 +31,7 @@ const PageThree = ({ initialValues, handleFormChange }) => {
 								<div className='bg-white c-shadow'>
 										<Form>
 										<Grid container spacing={5} style={{padding:"2rem"}}>
-											{/* <Grid item xs={12}>
-												<Typography
-													variant="h6"
-													style={{ marginBottom: "1rem" }}
-													align="center"
-													color='textSecondary'
-												>
-													Personal Info
-												</Typography>
-											</Grid> */}
+											{}
 											{/*Left*/}
 											<Grid item xs={12} lg={6} >
 												<Grid container spacing={5}>
@@ -60,13 +51,7 @@ const PageThree = ({ initialValues, handleFormChange }) => {
 														/>
 													</Grid>
 													<Grid item xs={12}>
-													{/* <div className='flex items-center'>
-														<span className='mr1 gray'>Currently Employed</span>
-														<label className="switch" htmlFor="employed">
-															<input type="checkbox" name="Currently Employed" id="employed"/>
-															<div className="slider round"></div>
-														</label>
-													</div> */}
+													{}
 														<Checkbox
 															name="currentlyEmployedFlag"
 															label="Currently Employed"
@@ -96,13 +81,7 @@ const PageThree = ({ initialValues, handleFormChange }) => {
 														/>
 													</Grid>
 													<Grid item xs={12}>
-													{/* <div className='flex items-center'>
-														<span className='mr1 gray'>EU Driver's License</span>
-														<label className="switch" htmlFor="dl">
-															<input name="Driver's License" type="checkbox" id="dl"/>
-															<div className="slider round"></div>
-														</label>
-													</div> */}
+													{}
 														<Checkbox
 															name="drivingPermitFlag"
 															label="EU Driver's License"

@@ -44,14 +44,6 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 
 						return (
 							<>
-								{/* <Typography
-									variant="h6"
-									align="center"
-									color='textSecondary'
-									style={{marginBottom:"1rem"}}
-								>
-									Apply Now
-								</Typography> */}
 								<div className="flex flex-row-l self-start flex-row-m flex-column">
 									<div className="flex flex-1 mt2-m mt2 mt2-l" >
 										<div className="tc">
@@ -106,13 +98,6 @@ const PageOne = ({ initialValues, handleFormChange }) => {
 																</Grid>
 
 																<Grid item xs={12}>
-																	{/* <div className='flex items-center'>
-																		<span className='mr1 gray f5-l f5-m f6'>Currently Looking For a Job</span>
-																		<label className="switch" htmlFor="job">
-																			<input name="Currently Looking For Job" type="checkbox" id="job" />
-																			<div className="slider round"></div>
-																		</label>
-																	</div> */}
 																	<div className="switchclr">
 																		<Switch 
 																			name="activeJobSeeking"

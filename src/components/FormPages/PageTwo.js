@@ -43,21 +43,12 @@ const PageTwo = ({ initialValues, handleFormChange, editform }) => {
 							<div className='bg-white c-shadow'>
 								<Form>
 									<Grid container spacing={3} xs={12} style={{ padding: "2rem" }}>
-										{/* <Grid item xs={12}>
-												<Typography
-													variant="h6"
-													style={{ marginBottom: "1rem" }}
-													align="center"
-													color='textSecondary'
-												>
-													Upload CV
-												</Typography>
-											</Grid> */}
+										{}
 										<div className='flex'>
 											<div className='mr4 flex-1'><ResumeUpload editform={editform} /></div>
 											<div className='flex-1'><ResumeUploadGer editform={editform}/></div>
 										</div>
-										<Grid item xs={12}>
+										<Grid item={true} xs={12}>
 											<Typography
 												variant="h6"
 												style={{ marginBottom: "1rem" }}
@@ -68,7 +59,7 @@ const PageTwo = ({ initialValues, handleFormChange, editform }) => {
 												Positions applying for
 													</Typography>
 
-											<Grid item xs={12} className='lsv'>
+											<Grid item={true} xs={12} className='lsv'>
 												<AutocompleteChips
 													name="desiredPositions"
 													placeholder="Desired Positions"
@@ -77,7 +68,7 @@ const PageTwo = ({ initialValues, handleFormChange, editform }) => {
 											</Grid>
 
 										</Grid>
-										<Grid item xs={12}>
+										<Grid item={true} xs={12}>
 											<Buttons editform={editform} back={() => handleFormChange(values, 1, true, false)} />
 										</Grid>
 									</Grid>

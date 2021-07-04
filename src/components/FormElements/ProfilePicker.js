@@ -79,7 +79,7 @@ const ProfilePicker = () => {
 
 				return (
 					<Grid container spacing={3} xs={12}>
-						<Grid item xs={12}>
+						<Grid item={true} xs={12}>
 							<Typography
 								color='textSecondary'
 								variant="h6"
@@ -88,7 +88,7 @@ const ProfilePicker = () => {
 								Online Profiles:
 							</Typography>
 						</Grid>
-						<Grid item xs={12} md={3}>
+						<Grid item={true} xs={12} md={3}>
 							<TextField
 								fullWidth
 								select
@@ -106,7 +106,7 @@ const ProfilePicker = () => {
 								))}
 							</TextField>
 						</Grid>
-						<Grid item xs={12} md={6}>
+						<Grid item={true} xs={12} md={6}>
 							<TextField
 								fullWidth
 								className="lsv-pp"
@@ -117,7 +117,7 @@ const ProfilePicker = () => {
 								onKeyDown={handleKeyDown }
 							/>
 						</Grid>
-						<Grid item xs={12} md={3} style={{ display: "flex", alignItems: "center" }}>
+						<Grid item={true} xs={12} md={3} style={{ display: "flex", alignItems: "center" }}>
 							<Button
 								startIcon={<AddIcon />}
 								fullWidth
@@ -126,7 +126,7 @@ const ProfilePicker = () => {
 								className="dim"
 							>Add</Button>
 						</Grid>
-						<Grid item xs={12}>
+						<Grid item={true} xs={12}>
 							{
 								// eslint-disable-next-line
 								profilesArray.map((profile, i) => {
