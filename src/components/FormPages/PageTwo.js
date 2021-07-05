@@ -1,28 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Formik, Form } from 'formik';
 import { pageTwoValidation as validationSchema } from '../../util/validation/form-validation';
 import { Grid, Typography } from '@material-ui/core';
 import ResumeUpload from '../FormElements/ResumeUpload';
 import Buttons from '../FormElements/Buttons';
-import { url } from '../../util/data/base-url';
 import AutocompleteChips from '../FormElements/AutocompleteChipsForm';
 import ResumeUploadGer from '../FormElements/ResumeUploadGer';
-import { AvailableJobs as initialjobs} from '../../util/data/AvailableJobs';
+import { AvailableJobs } from '../../util/data/AvailableJobs';
 
 
 const PageTwo = ({ initialValues, handleFormChange, editform }) => {
-
-	const [AvailableJobs, setAvailableJobs] = useState([]);
-
-	useEffect(() => {
-		fetch(`${url}/desiredjoblist`, {mode:'cors',method: 'POST',headers: { "Content-Type": "application/json" }})
-		.then(res => res.json())
-		.then(data => {
-			if(data.success){
-				setAvailableJobs(data.data.reverse());
-			}
-		}).catch(()=>setAvailableJobs(initialjobs));
-	},[])
 
 	const handleSubmit = (values) => {
 		handleFormChange(values, 1, 'information')
@@ -37,8 +24,6 @@ const PageTwo = ({ initialValues, handleFormChange, editform }) => {
 			>
 				{
 					({ values }) => {
-
-						//console.log(values)
 						return (
 							<div className='bg-white c-shadow'>
 								<Form>

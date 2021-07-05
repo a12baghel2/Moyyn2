@@ -49,9 +49,7 @@ export const convertNumsToYears = (nums) => {
   }
 };
 
-// export const getExtension = (value) => {
-//    return value[0].file.name.split(".")[value[0].file.name.split(".").length - 1];
-// }
+
 
 export const checkFormComplete = (form) => {
   let missingParts = [];

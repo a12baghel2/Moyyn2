@@ -24,7 +24,6 @@ const PageFive = ({ initialValues, handleFormChange, formComplete }) => {
 		} else {
 			setAlert(missingParts);
 		}
-		//handleFormChange(values, 4, false, true, true);
 	}
 
 	const onKeyDown = (keyEvent) => {
@@ -47,16 +46,7 @@ const PageFive = ({ initialValues, handleFormChange, formComplete }) => {
 								<div className='bg-white c-shadow'>
 										<Form onKeyDown={onKeyDown}> 
 											<Grid container spacing={3} style={{padding:"2rem"}}>
-												{/* <Grid item xs={12}>
-													<Typography 
-														variant="h6"
-														style={{ marginBottom: "1rem" }}
-														align="center"
-														color='textSecondary'
-													>
-														Career and skills
-													</Typography>
-												</Grid> */}
+
 												<Grid item xs={12}>
 													<SelectMenu
 														name='careerLevel'
@@ -75,7 +65,6 @@ const PageFive = ({ initialValues, handleFormChange, formComplete }) => {
 													{/* <Skills />  */}
 													<AutocompleteChips freeSolo={true} 
 														name='skills'
-														//label='Skills'
 														placeholder="Skills"
 														options={fallbackSkills}
 													/> 

@@ -11,7 +11,6 @@ const FormikAutocomplete = ({ name, label, options, optionLabel, freeSolo = true
 			<Field name={name}>
 				{({ form, field, meta }) => {
 
-					//console.log('autocomplete value: ',form.values[name])
 
 					return (
 						<Autocomplete

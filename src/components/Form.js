@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { checkFormComplete } from '../util/helpers/helper-methods';
-import { url } from '../util/data/base-url';
 import {Switch,Route,Redirect,useRouteMatch,useHistory,NavLink} from 'react-router-dom';
 import { initialValues } from '../util/data/initial-values';
 import PageOne from './FormPages/PageOne';
@@ -31,7 +30,6 @@ const Form = ({ setEmail ,setid, editform=false, initialdata, setloggedin}) => {
 	const [submitTrigger, setSubmitTrigger] = useState(false);
 
 	useEffect(() => {
-		//console.log('checking connection')
 		if(editform) {
 			history.push('editprofile/cv');
 			setFormValues(initialdata);
@@ -80,33 +78,6 @@ const Form = ({ setEmail ,setid, editform=false, initialdata, setloggedin}) => {
 		form[1].cvGerman = {data:file2,fileName:fileName + '_german.pdf'};
 		form[0].email = form[0].email.toLowerCase();
 
-		const timeout = setTimeout(() => {
-			history.push('/candidate/partner');
-		}, 1000 * 120)		
-
-		fetch(`${url}/${editform?'editprofile':'register'}`, {method: 'POST',headers: { "Content-Type": "application/json" },body: JSON.stringify(form)})
-			.then(res => res.json())
-			.then(data => {
-				clearTimeout(timeout);
-				//console.log('store returns:', data);
-				if(data.success){
-					if(!editform){
-						setEmail(form[0].email);
-						setid(data.candidate_id);
-						setloggedin(true);
-						localStorage.setItem("loggedin",JSON.stringify(true));
-						localStorage.setItem("email",JSON.stringify(form[0].email));
-						localStorage.setItem("id",JSON.stringify(data.candidate_id));
-					}
-					history.push('/dashboard');
-				}
-			})
-			.catch(err => {
-				clearTimeout(timeout);
-				//console.log('store error:', err);
-				setIsLoading(false);
-				setError(true);
-			})
 	}
 
 	useEffect(() => {
@@ -163,7 +134,6 @@ const Form = ({ setEmail ,setid, editform=false, initialdata, setloggedin}) => {
 				<div className="flex flex-row-l flex-column-m flex-column items-center items-start-l justify-around ph5-l pv4-l pa2-m pa2 bg-white" style={{minHeight:window.location.pathname==="/application" || window.location.pathname==="/application/"?"":"100vh"}}>			
 					<div className={`${window.location.pathname==="/application" || window.location.pathname==="/application/" || window.location.pathname==="/editprofile" || window.location.pathname==="/editprofile/"?"hide":""} ml5 mr5 mt3`}>
 						<div className='buttons flex mb5'>
-							{/* <NavLink  className={`pointer link mr2 dim ba br-100 pv2 ph3 bg-white`} style={{border:"1px solid #6EB6FF", color:"#6EB6FF"}} onClick={()=>history.push(`${path}`)} exact to={`${path}`} activeClassName="active-btn">1</NavLink> */}
 							<div exact="true" to={path} activeclassname="hide">
 								<NavLink  className={`pointer link mr2 dim ba br-100 ph3 pv2 bg-white`} style={{border:"1px solid #6EB6FF", color:"#6EB6FF"}} onClick={()=>history.push(`${path}/cv`)} exact to={`${path}/cv`} activeClassName="active-btn">1</NavLink>
 								<NavLink  className={`pointer link mr2 dim ba br-100 ph3 pv2 bg-white`} style={{border:"1px solid #6EB6FF", color:"#6EB6FF"}} onClick={()=>history.push(`${path}/information`)} exact to={`${path}/information`} activeClassName="active-btn">2</NavLink>
@@ -172,8 +142,6 @@ const Form = ({ setEmail ,setid, editform=false, initialdata, setloggedin}) => {
 							</div>
 						</div>						
 						<Switch >
-						{/* <Route exact path={`${path}`} exact>
-						</Route> */}
 						<Route exact path={`${path}/cv`} >
 							<p className='f5 signleftp1'>Upload your CV</p>
 							<FormImage2/>
@@ -190,7 +158,6 @@ const Form = ({ setEmail ,setid, editform=false, initialdata, setloggedin}) => {
 							<p className='f5 signleftp1'>Let us know about your skills</p>
 							<FormImage5/>
 						</Route>
-						{/* <Redirect to={`${path}`} /> */}
 					</Switch>
 					</div>
 

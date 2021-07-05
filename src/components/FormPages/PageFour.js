@@ -35,24 +35,7 @@ const PageFour = ({ initialValues, handleFormChange }) => {
 								<div className='bg-white c-shadow'>
 										<Form onKeyDown={onKeyDown}>
 									<Grid container spacing={5} style={{padding:"2rem"}}>
-										{/* <Grid item xs={12}>
-											<Typography
-												variant="h6"
-												style={{ marginBottom: "1rem" }}
-												align="center"
-												color='textSecondary'
-											>
-												Preferences
-											</Typography>
-										</Grid> */}
 										<Grid item xs={12}>
-											{/* <div className='flex items-center'>
-												<span className='mr1 gray'>I am willing to relocate</span>
-												<label className="switch" htmlFor="dl">
-													<input type="checkbox" name='Relocation Willingness' id="rl" />
-													<div className="slider round"></div>
-												</label>
-											</div> */}
 											<Checkbox
 												name='relocationWillingnes'
 												label='I am willing to relocate'

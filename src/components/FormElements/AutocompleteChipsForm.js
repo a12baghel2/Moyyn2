@@ -41,8 +41,7 @@ const AutocompleteChipsForm = ({ name, options, label, freeSolo=false, placehold
 					         renderInput={(params) => (
 					            <TextField 
 					           		{...params} 
-					           		variant="outlined" 
-									   //label={label} 
+					           		variant="outlined"  
 									   placeholder={placeholder}
 					           	/>
 					         )}
